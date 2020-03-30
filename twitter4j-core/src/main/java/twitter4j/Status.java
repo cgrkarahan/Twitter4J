@@ -46,6 +46,17 @@ public interface Status extends Comparable<Status>, TwitterResponse,
      *
      * @return the text (e.g. Along with our new #Twitterbird, we've also updated our Display Guidelines: https://t.co/Ed4omjYs  ^JC)
      */
+    
+    /**
+     * Returns the id_str field of the status. The string version of the id is the preferred
+     * id to use in, e.g., constructing permantent links to a tweet. See:
+     *
+     * https://dev.twitter.com/overview/api/twitter-ids-json-and-snowflake
+     *
+     * @return The value of the id_str field of the status.
+     */
+    String getIdString();
+    
     String getText();
 
     int getDisplayTextRangeStart();

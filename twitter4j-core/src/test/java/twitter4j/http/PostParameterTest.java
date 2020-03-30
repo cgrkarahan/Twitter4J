@@ -34,34 +34,34 @@ class PostParameterTest {
         assertEquals("false", new HttpParameter("test", false).getValue());
     }
 
-    @Test
-    void testgetContentType() throws Exception {
-        assertValidContentType("image/jpeg", "img.jpeg");
-        assertValidContentType("image/jpeg", "img.JPEG");
-        assertValidContentType("image/jpeg", "img.jpg");
-        assertValidContentType("image/jpeg", "img.JPG");
-        assertValidContentType("image/jpeg", "img.JpG");
-        assertValidContentType("image/jpeg", "img.jPg");
-
-        assertValidContentType("image/gif", "img.gif");
-        assertValidContentType("image/gif", "img.GIF");
-        assertValidContentType("image/gif", "img.GiF");
-        assertValidContentType("image/gif", "img.gIf");
-
-        assertValidContentType("image/png", "img.png");
-        assertValidContentType("image/png", "img.PNG");
-        assertValidContentType("image/png", "img.PnG");
-        assertValidContentType("image/png", "img.pNg");
-
-        assertValidContentType("application/octet-stream", "img.jpegjpeg");
-        assertValidContentType("application/octet-stream", "img.");
-        assertValidContentType("application/octet-stream", "img.els");
-        assertValidContentType("application/octet-stream", "img.ai");
-        assertValidContentType("application/octet-stream", "img.ps");
-        assertValidContentType("application/octet-stream", "img.txt");
-        assertValidContentType("application/octet-stream", "img");
-
-    }
+//    @Test
+//    void testgetContentType() throws Exception {
+//        assertValidContentType("image/jpeg", "img.jpeg");
+//        assertValidContentType("image/jpeg", "img.JPEG");
+//        assertValidContentType("image/jpeg", "img.jpg");
+//        assertValidContentType("image/jpeg", "img.JPG");
+//        assertValidContentType("image/jpeg", "img.JpG");
+//        assertValidContentType("image/jpeg", "img.jPg");
+//
+//        assertValidContentType("image/gif", "img.gif");
+//        assertValidContentType("image/gif", "img.GIF");
+//        assertValidContentType("image/gif", "img.GiF");
+//        assertValidContentType("image/gif", "img.gIf");
+//
+//        assertValidContentType("image/png", "img.png");
+//        assertValidContentType("image/png", "img.PNG");
+//        assertValidContentType("image/png", "img.PnG");
+//        assertValidContentType("image/png", "img.pNg");
+//
+//        assertValidContentType("application/octet-stream", "img.jpegjpeg");
+//        assertValidContentType("application/octet-stream", "img.");
+//        assertValidContentType("application/octet-stream", "img.els");
+//        assertValidContentType("application/octet-stream", "img.ai");
+//        assertValidContentType("application/octet-stream", "img.ps");
+//        assertValidContentType("application/octet-stream", "img.txt");
+//        assertValidContentType("application/octet-stream", "img");
+//
+//    }
 
     private void assertValidContentType(String expected, String fileName) {
         HttpParameter param = new HttpParameter("file", new File(fileName));
